@@ -19,11 +19,9 @@ class User extends Authenticatable
      * @var list<string>
      */
     protected $fillable = [
-        'nama',
+        'name',
         'email',
-        'kata_sandi',
-        'peran',
-        'aktif',
+        'password',
     ];
 
     /**
@@ -32,12 +30,10 @@ class User extends Authenticatable
      * @var list<string>
      */
     protected $hidden = [
-        'kata_sandi',
         'remember_token',
+        'password',
     ];
 
-    const CREATED_AT = 'dibuat_pada';
-    const UPDATED_AT = 'diperbarui_pada';
 
 
     // password mutator
